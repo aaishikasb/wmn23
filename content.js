@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(
     if (request.method == "fetchPage") {
 
       var tweetTextElement = document.querySelector('[data-testid="tweetText"]').innerText;
-      console.log(tweetTextElement);
+      // console.log(tweetTextElement);
       var suffix = "Can you give more context on - "
       var openText = suffix.concat(tweetTextElement);
       console.log(openText);
@@ -26,8 +26,8 @@ chrome.runtime.onMessage.addListener(
         .then(data => {
           var openOutput = data.choices[0].message.content;
           console.log(openOutput);
-          sendResponse({ text: (openOutput), method: "fetchPage" });
+          sendResponse({ text: openOutput, method: "fetchPage" });
         })
-        .catch(error => console.error(error));
+        .catch(error => console.error(error));  
     };
   });

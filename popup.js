@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
           chrome.tabs.sendMessage(tabs[0].id, {method: "fetchPage"}, function(response) {
             if(response.method == "fetchPage"){
-              document.getElementById("output").append(response.text);
+              document.getElementById("output").append= response.text;
+              document.getElementById("methodText").innerHTML= response.method;
             }
           });
         });
