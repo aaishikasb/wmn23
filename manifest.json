@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TweetReadPro",
-  "version": "1.0",
-  "description": "A simple extension that changes the way you usually read tweets.",
+  "name": "Tweereader",
+  "version": "1.0.0",
+  "description": "A simple extension that harness the power of ChatGPT to get more context on interesting tweets!",
   "background": {
     "service_worker": "background.js"
   },
