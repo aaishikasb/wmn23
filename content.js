@@ -35,7 +35,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         return response.json();
       })
       .then(data => {
-        var openOutput = data.choices[0].message.content;
+        var openOutput = "The Explanation is: "+data.choices[0].message.content;
         console.log("OpenAI output:", openOutput);
         
         chrome.runtime.sendMessage({ type: 'storeSummary', tabId: tabId, summary: openOutput });
@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
   if (request.type === 'getSummary') {
     const openOutput = window.tabSummaries[tabId];
-    sendResponse({ summary: openOutput || "No summary available" });
+    sendResponse({ summary: openOutput || "No summary available." });
     return true;
   }
 });

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chrome.tabs.sendMessage(
         tabs[0].id,
         { method: 'fetchPage', tabId: tabs[0].id },
-        (response) => updatePopupContent(response.summary || 'No summary available')
+        (response) => updatePopupContent(response.summary || 'No summary available.')
       );
     });
   };

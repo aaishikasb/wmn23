@@ -40,6 +40,7 @@ body {
     /* 28px */
     border-radius: 0.375rem; /* 6px */
     border-color: rgb(59 130 246);
+    margin-bottom: 0.75em;
 }
 
 .button:hover {
@@ -50,4 +51,11 @@ body {
     line-height: 1.75rem;
     /* 28px */
     border-radius: 0.5rem; /* 8px */
+}
+
+.text-output {
+font-size: 1.125rem;
+/* 18px */
+line-height: 1.5rem;
+/* 28px */
 }
